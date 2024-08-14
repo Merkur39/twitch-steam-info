@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Twitch Steam Stats",
+  "description": "Adds stats on the current game below the video.",
+  "version": "1.0",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": ["https://*.twitch.tv/*", "https://steamcharts.com/*"],
+  "background": {
+    "service_worker": "src/background/index.ts"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.twitch.tv/*"],
+      "js": ["src/content-scripts/index.tsx"]
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/index.html"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "env": {
+    "__ENV__": "DEVELOPMENT"
+  },
+  "watch": [
+    "src",
+    "vite.config.ts",
+    "manifest.json"
+  ],
+  "ext": "tsx,css,html,ts,json",
+  "ignore": [
+    "src/**/*.spec.ts"
+  ],
+  "exec": "vite build"
+}
